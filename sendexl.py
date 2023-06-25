@@ -4,21 +4,25 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.base import MIMEBase
 from email.utils import COMMASPACE
 from email import encoders
+from email.mime.text import MIMEText
+
+# server="smtplib.gmail.com"
+# port=587
+# email_from="ieee.event2023@gmail.com"
+# password="ijoqagkzrabpshsa"
+# email_to=['sabarinathan.project@gmail.com','2021pecit223@gmail.com']
+# subject = 'Excel File Attachment'
 
 
-server="smtplib.gmail.com"
-port=587
-email_from="ieee.event2023@gmail.com"
-password=""
-email_to=['sabarinathan.project@gmail.com','2021pecit223@gmail.com']
-subject = 'Excel File Attachment'
-body="xl File"
-
-def techxl():
+def techxl(server,port,email_from,password,email_to,subject):
 	
 	file_path="./tech.xlsx"
+
+    
 	file_name = os.path.basename(file_path)
 
+     
+	body="xl File\n\nHII"
 	message = MIMEMultipart()
 	message['From'] = email_from
 	message['To'] = COMMASPACE.join(email_to)
@@ -43,10 +47,11 @@ def techxl():
 
 
 
-def non_tech():
+def non_techxl(server,port,email_from,password,email_to,subject):
 	file_path="./nontech.xlsx"
 	file_name = os.path.basename(file_path)
-
+ 
+	body="xl File"
 	message = MIMEMultipart()
 	message['From'] = email_from
 	message['To'] = COMMASPACE.join(email_to)
