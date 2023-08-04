@@ -4,9 +4,9 @@ from sendexl import techxl,non_techxl
 
 server="smtplib.gmail.com"
 port=587
-email_from="ieee.event2023@gmail.com"
-password="vwdvpyknrjgqqhzc"
-email_to=['sabarinathan.project@gmail.com','2021pecit223@gmail.com']
+email_from=""
+password=""
+email_to=['']
 subject = 'Excel File Attachment'
 
 
